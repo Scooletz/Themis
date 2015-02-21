@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Themis</id>
+	  <title>Themis</title>
+    <version>1.0.1.0</version>
+    <authors>Scooletz</authors>
+    <owners>Scooletz</owners>
+    <summary>An authorization library for .NET applications.</summary>
+    <description>Themis is a lightweight, extensible authorization system, providing a explicit and strong type way of defining and demanding permissions.</description>
+    <projectUrl>https://github.com/Scooletz/Themis</projectUrl>
+    <licenseUrl>https://github.com/Scooletz/Themis/blob/master/LICENSE</licenseUrl>
+    <tags>Themis authorization NHibernate</tags>
+    <language>en-US</language>
+    <releaseNotes>
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="Themis\bin\Release\Themis.dll" target="lib\net45" />
+  </files>
+</package>

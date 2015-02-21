@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Generated from NHibernate.Mapping.Attributes on 2008-10-18 19:24:59Z.-->
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <!--EMPLOYEE-->
+  <class name="Themis.Tests.NHibernate.Data.Employee, Themis.Tests" table="Employee">
+    <id name="Id" access="property" column="id">
+      <generator class="guid.comb" />
+    </id>
+    <property name="Name">
+      <column name="name" length="255" not-null="true" />
+    </property>
+    <property name="Surname">
+      <column name="surname" length="255" not-null="true" />
+    </property>
+    <property name="EmployementDate">
+      <column name="employementDate" not-null="true" />
+    </property>
+    <many-to-one name="EmployingUnit" outer-join="false" foreign-key="FK1_EMPLOYEE_TO_UNIT">
+      <column name="unit_id" not-null="false" />
+    </many-to-one>
+  </class>
+  
+  <!--UNIT-->
+  <class name="Themis.Tests.NHibernate.Data.Unit, Themis.Tests" table="Unit">
+    <id name="Id" access="property" column="id">
+      <generator class="guid.comb" />
+    </id>
+    <property name="Name">
+      <column name="name" length="255" not-null="true" unique-key="UNIQUE_NAME_AT_LEVEL" />
+    </property>
+    <many-to-one name="Manager" outer-join="false" foreign-key="FK1_UNIT_MANAGER">
+      <column name="manager_employee_id" not-null="false" />
+    </many-to-one>
+    <many-to-one name="ParentUnit" outer-join="false" foreign-key="FK1_PARENT_UNIT_ID">
+      <column name="parent_unit_id" not-null="false" />
+    </many-to-one>
+    <set name="ChildUnits" access="nosetter.camelcase" cascade="all-delete-orphan" inverse="true" batch-size="10">
+      <key column="parent_unit_id" />
+      <one-to-many class="Themis.Tests.NHibernate.Data.Unit, Themis.Tests" />
+    </set>
+  </class>
+  
+  <!--ROLES-->
+  <class name="Themis.Tests.NHibernate.Data.BaseRole, Themis.Tests" table="Roles" abstract="true" discriminator-value="0">
+    <id name="Id" access="property" column="id">
+      <generator class="guid.comb" />
+    </id>
+    <discriminator column="type" type="int" />
+    <many-to-one name="ForEmployee" outer-join="false" foreign-key="FK1_ROLE_EMPLOYEE">
+      <column name="employee_id" not-null="false" />
+    </many-to-one>
+    <subclass name="Themis.Tests.NHibernate.Data.ManagerRole, Themis.Tests" discriminator-value="1">
+      <many-to-one name="ManagedUnit" outer-join="false" foreign-key="FK1_MANAGERROLE_UNIT">
+        <column name="managed_unit_id" not-null="false" />
+      </many-to-one>
+    </subclass>
+    <subclass name="Themis.Tests.NHibernate.Data.SupportingManagerRole, Themis.Tests" discriminator-value="2">
+      <many-to-one name="BarelyManagedUnit" outer-join="false" foreign-key="FK1_MANAGERROLE_UNIT">
+        <column name="managed_unit_id" not-null="false" />
+      </many-to-one>
+    </subclass>
+  </class>
+
+  <!--RECRUITMENT MOTION-->
+  <class name="Themis.Tests.NHibernate.Data.RecruitmentMotion, Themis.Tests" table="RecruitmentMotion">
+    <id name="Id" access="property" column="id">
+      <generator class="guid.comb" />
+    </id>
+    <property name="Name">
+      <column name="name" length="255" not-null="true" />
+    </property>
+
+    <many-to-one name="Owner" outer-join="false" foreign-key="FK1_RECRUITMENTMOTION_TO_OWNER">
+      <column name="owner_employee_id" not-null="false" />
+    </many-to-one>
+
+    <many-to-one name="ForUnit" outer-join="false" foreign-key="FK1_RECRUITMENTMOTION_TO_UNIT">
+      <column name="unit_id" not-null="false" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

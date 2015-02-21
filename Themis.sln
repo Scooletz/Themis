@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themis", "Themis\Themis.csproj", "{89D3FF8F-314E-4B09-B983-F62BF4B853D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themis.Tests", "Themis.Tests\Themis.Tests.csproj", "{09321691-FCD3-4841-8D99-01AFFCA15991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themis.NHibernate", "Themis.NHibernate\Themis.NHibernate.csproj", "{C33842A1-AD19-4636-9FD0-D449648C3518}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89D3FF8F-314E-4B09-B983-F62BF4B853D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D3FF8F-314E-4B09-B983-F62BF4B853D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D3FF8F-314E-4B09-B983-F62BF4B853D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D3FF8F-314E-4B09-B983-F62BF4B853D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09321691-FCD3-4841-8D99-01AFFCA15991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09321691-FCD3-4841-8D99-01AFFCA15991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09321691-FCD3-4841-8D99-01AFFCA15991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09321691-FCD3-4841-8D99-01AFFCA15991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33842A1-AD19-4636-9FD0-D449648C3518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33842A1-AD19-4636-9FD0-D449648C3518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33842A1-AD19-4636-9FD0-D449648C3518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33842A1-AD19-4636-9FD0-D449648C3518}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

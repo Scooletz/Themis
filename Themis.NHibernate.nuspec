@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Themis.NHibernate</id>
+	  <title>Themis.NHibernate</title>
+    <version>1.0.1.0</version>
+    <authors>Scooletz</authors>
+    <owners>Scooletz</owners>
+    <summary>An integration package for NHibernate ORM, to apply Themis authorization on NHibernate queries.</summary>
+    <description>Themis is a lightweight, extensible authorization system, providing a explicit and strong type way of defining and demanding permissions.</description>
+    <projectUrl>https://github.com/Scooletz/Themis</projectUrl>
+    <licenseUrl>https://github.com/Scooletz/Themis/blob/master/LICENSE</licenseUrl>
+    <tags>Themis authorization NHibernate</tags>
+    <language>en-US</language>
+    <releaseNotes>
+    </releaseNotes>
+    <dependencies>
+      <group>
+        <dependency id="Themis" version="1.1.0" />
+        <dependency id="NHibernate" version="4.0.3.4000" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Themis.NHibernate\bin\Release\Themis.NHibernate.dll" target="lib\net45" />
+  </files>
+</package>

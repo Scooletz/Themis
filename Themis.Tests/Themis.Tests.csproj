@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09321691-FCD3-4841-8D99-01AFFCA15991}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Themis.Tests</RootNamespace>
+    <AssemblyName>Themis.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthorizationServiceTests.cs" />
+    <Compile Include="Examples\AllowedValueDemand.cs" />
+    <Compile Include="Examples\AllowedValuesTests.cs" />
+    <Compile Include="Examples\RoleDefinitionBase.cs" />
+    <Compile Include="Examples\ServiceExtensions.cs" />
+    <Compile Include="IntegrationTests.cs" />
+    <Compile Include="NHibernate\Data\BaseRole.cs" />
+    <Compile Include="NHibernate\Data\Employee.cs" />
+    <Compile Include="NHibernate\Data\RecruitmentMotion.cs" />
+    <Compile Include="NHibernate\Data\ManagerRole.cs" />
+    <Compile Include="NHibernate\Data\SupportingManagerRole.cs" />
+    <Compile Include="NHibernate\Data\Unit.cs" />
+    <Compile Include="NHibernate\Demands\ViewDemand.cs" />
+    <Compile Include="NHibernate\ExpressionTests.cs" />
+    <Compile Include="NHibernate\FilterConditionBuilderTests.cs" />
+    <Compile Include="NHibernate\FilterParameterProviderTests.cs" />
+    <Compile Include="NHibernate\IntegrationTests.cs" />
+    <Compile Include="NHibernate\NHibernateBaseTest.cs" />
+    <Compile Include="NHibernate\ParameterMemberExpressionFinderTests.cs" />
+    <Compile Include="NHibernate\RoleDefinitions\BaseRoleDefinition.cs" />
+    <Compile Include="NHibernate\RoleDefinitions\ManagerRoleDefinition.cs" />
+    <Compile Include="NHibernate\RoleDefinitions\SupportingManagerRoleDefinition.cs" />
+    <Compile Include="RoleDefinitionTests.cs" />
+    <Compile Include="RoleModelTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestData\Entity.cs" />
+    <Compile Include="TestData\EntityDemand.cs" />
+    <Compile Include="TestData\GenericEntityDemand.cs" />
+    <Compile Include="TestData\OtherRole.cs" />
+    <Compile Include="TestData\Role.cs" />
+    <Compile Include="TestData\BDemand.cs" />
+    <Compile Include="TestData\ADemand.cs" />
+    <Compile Include="TypeTrio.cs" />
+    <Compile Include="Utils\ExpressionHelperTests.cs" />
+    <Compile Include="Utils\TypeExtensionsTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NHibernate\Mapping.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Themis.NHibernate\Themis.NHibernate.csproj">
+      <Project>{c33842a1-ad19-4636-9fd0-d449648c3518}</Project>
+      <Name>Themis.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Themis\Themis.csproj">
+      <Project>{89d3ff8f-314e-4b09-b983-f62bf4b853d7}</Project>
+      <Name>Themis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

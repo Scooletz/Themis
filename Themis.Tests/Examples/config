@@ -1,0 +1,3 @@
+[remote "SolrNet"]
+	url = https://Scooletz@github.com/Scooletz/SolrNet.git
+	puttykeyfile = D:/!Putty keys/private.ppk
