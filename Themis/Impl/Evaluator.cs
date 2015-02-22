@@ -21,8 +21,6 @@ namespace Themis.Impl
             _function = function;
         }
 
-        #region IEvaluator Members
-
         public object Evaluate(object permission, object role)
         {
             return _function((TDemand) permission, (TRole) role);
@@ -32,7 +30,5 @@ namespace Themis.Impl
         {
             get { return typeof (TDemand); }
         }
-
-        #endregion
     }
 }

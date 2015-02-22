@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using Themis.Cfg;
 
-namespace Themis.Utils.Expressions
+namespace Themis.Expressions
 {
     /// <summary>
     /// Provides methods for variety of expression operations,

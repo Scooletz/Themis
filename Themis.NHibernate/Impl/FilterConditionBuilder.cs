@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using NHibernate.Mapping;
+using Themis.Expressions;
 using Themis.NHibernate.Util;
-using Themis.Utils.Expressions;
 
 namespace Themis.NHibernate.Impl
 {

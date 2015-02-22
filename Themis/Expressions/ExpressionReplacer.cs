@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq.Expressions;
 
-namespace Themis.Utils.Expressions
+namespace Themis.Expressions
 {
     /// <summary>
     /// A class that is capable of doing a find and replace in an <see cref="Expression"/> tree.

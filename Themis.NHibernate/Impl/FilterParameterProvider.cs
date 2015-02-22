@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using NHibernate;
 using NHibernate.Type;
-using Themis.Utils.Expressions;
+using Themis.Expressions;
 
 namespace Themis.NHibernate.Impl
 {

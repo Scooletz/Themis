@@ -9,8 +9,6 @@ namespace Themis.Impl
     /// </summary>
     public class DefaultEvaluatorFactory : IEvaluatorFactory
     {
-        #region IEvaluatorFactory Members
-
         public IEvaluator[] GetEvaluators<TDemand, TRole, TResult>(
             Expression<Func<TDemand, TRole, TResult>> expression)
             where TDemand : class, IDemand<TResult>
@@ -22,7 +20,5 @@ namespace Themis.Impl
         public void EndModelsBuildUp()
         {
         }
-
-        #endregion
     }
 }

@@ -1,6 +1,5 @@
+using System;
 using NHibernate;
-
-// ReSharper disable ForCanBeConvertedToForeach
 
 namespace Themis.NHibernate.Impl
 {
@@ -8,7 +7,7 @@ namespace Themis.NHibernate.Impl
     /// The implementation of <see cref="FilterScope"/> providing thread static scope
     /// for filtering nhibernate queries.
     /// </summary>
-    public class FilterScope : IFilterScope
+    public class FilterScope : IDisposable
     {
         private readonly FilterApplier[] _filterAppliers;
         private readonly ISession _session;
@@ -17,26 +16,20 @@ namespace Themis.NHibernate.Impl
         {
             _filterAppliers = service.Evaluate<FilteringDemand, FilterApplier>(FilteringDemand.Instance, roles);
 
-            for (var i = 0; i < _filterAppliers.Length; i++)
+            foreach (var t in _filterAppliers)
             {
-                _filterAppliers[i].Enable(session);
+                t.Enable(session);
             }
 
             _session = session;
         }
 
-        #region IFilterScope Members
-
         public void Dispose()
         {
-            for (var i = 0; i < _filterAppliers.Length; i++)
+            foreach (var t in _filterAppliers)
             {
-                _filterAppliers[i].Disable(_session);
+                t.Disable(_session);
             }
         }
-
-        #endregion
     }
 }
-
-// ReSharper restore ForCanBeConvertedToForeach

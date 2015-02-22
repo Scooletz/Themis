@@ -19,16 +19,6 @@ namespace Themis
             where TDemand : class, IDemand<TResult>;
 
         /// <summary>
-        /// Evaluates the passed <see cref="claim"/> in the context of passed roles.
-        /// </summary>
-        /// <typeparam name="TClaim">The type of the claim.</typeparam>
-        /// <param name="claim">The claim instance.</param>
-        /// <param name="roles">The roles.</param>
-        /// <returns>An array of evaluated result objects.</returns>
-        bool[] Evaluate<TClaim>(TClaim claim, params object[] roles)
-            where TClaim : class, IClaim;
-
-        /// <summary>
         /// Checks whether there are any evaluators registered in the service for the specified demand type <see cref="TDemand"/>
         /// for the given roles <see cref="roles"/>.
         /// </summary>

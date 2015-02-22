@@ -1,9 +1,9 @@
 using System;
 using System.Linq.Expressions;
 using Themis.Cfg;
+using Themis.Expressions;
 using Themis.NHibernate;
 using Themis.Tests.NHibernate.Demands;
-using Themis.Utils.Expressions;
 
 namespace Themis.Tests.NHibernate.RoleDefinitions
 {

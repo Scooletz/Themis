@@ -41,16 +41,6 @@ namespace Themis.Cfg
         }
 
         /// <summary>
-        /// Removes all previously the evalator factories.
-        /// </summary>
-        /// <returns>This for method chaining.</returns>
-        public FluentConfiguration RemoveAllEvaluatorFactories()
-        {
-            _factories.Clear();
-            return this;
-        }
-
-        /// <summary>
         /// Adds the role definition to the configuration.
         /// </summary>
         /// <typeparam name="TRole"></typeparam>

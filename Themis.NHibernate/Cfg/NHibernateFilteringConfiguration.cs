@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using NHibernate.Cfg;
 using NHibernate.Dialect;
 using NHibernate.Mapping;
@@ -23,8 +22,7 @@ namespace Themis.NHibernate.Cfg
         private readonly EvaluatorFactory _factory;
         private readonly FluentConfiguration _fluentConfiguration;
 
-        internal NHibernateFilteringConfiguration(FluentConfiguration fluentConfiguration,
-                                                  Configuration cfg, Action<IDemandService> afterCreation)
+        internal NHibernateFilteringConfiguration(FluentConfiguration fluentConfiguration, Configuration cfg, Action<IDemandService> afterCreation)
         {
             _fluentConfiguration = fluentConfiguration;
             _cfg = cfg;

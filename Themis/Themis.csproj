@@ -62,8 +62,13 @@
     <Compile Include="Cfg\FluentConfiguration.cs" />
     <Compile Include="Cfg\Fluently.cs" />
     <Compile Include="Cfg\RoleDefinition.cs" />
+    <Compile Include="Claims\ITransformToResult.cs" />
+    <Compile Include="Claims\IReduceResults.cs" />
+    <Compile Include="Claims\ReadonlyClaimIdentity.cs" />
+    <Compile Include="Claims\ReadonlyClaimPrincipal.cs" />
     <Compile Include="DemandServiceExtensions.cs" />
-    <Compile Include="IClaim.cs" />
+    <Compile Include="Expressions\ExpressionHelper.cs" />
+    <Compile Include="Expressions\ExpressionReplacer.cs" />
     <Compile Include="IDemandService.cs" />
     <Compile Include="Impl\DemandService.cs" />
     <Compile Include="Impl\DefaultEvaluatorFactory.cs" />
@@ -75,9 +80,6 @@
     <Compile Include="Model\IRoleModel.cs" />
     <Compile Include="Model\RoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Expressions\ExpressionHelper.cs" />
-    <Compile Include="Utils\Expressions\ExpressionReplacer.cs" />
-    <Compile Include="Utils\TypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

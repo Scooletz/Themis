@@ -69,7 +69,7 @@ namespace Themis.Cfg
         /// to map all the claims. Every <paramref name="expression"/> will be processed by
         /// the <see cref="IEvaluatorFactory"/> during <see cref="FluentConfiguration.BuildDemandService"/> process. </remarks>
         protected void Add<TClaim>(Expression<Func<TClaim, TRole, bool>> expression)
-            where TClaim : class, IClaim
+            where TClaim : class, IDemand
         {
             Add<TClaim, bool>(expression);
         }

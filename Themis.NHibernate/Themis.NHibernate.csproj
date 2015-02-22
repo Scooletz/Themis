@@ -58,7 +58,6 @@
     <Compile Include="Cfg\NHibernateFilteringConfiguration.cs" />
     <Compile Include="DemandServiceExtensionMethods.cs" />
     <Compile Include="EntityDemand.cs" />
-    <Compile Include="IFilterScope.cs" />
     <Compile Include="Impl\FilterConditionBuilder.cs" />
     <Compile Include="Impl\FilterApplier.cs" />
     <Compile Include="Impl\FilteringDemand.cs" />

@@ -18,8 +18,6 @@ namespace Themis.Impl
             _evaluators = evaluators.ToDictionary(m => m.RoleType, m => m);
         }
 
-        #region IDemandService Members
-
         /// <summary>
         /// Evaluates the specified demand.
         /// </summary>
@@ -38,22 +36,6 @@ namespace Themis.Impl
             return EvaluateImpl<TDemand, TResult>(demand, roles);
         }
 
-        /// <summary>
-        /// Evaluates the specified claim.
-        /// </summary>
-        /// <typeparam name="TClaim">The type of the claim.</typeparam>
-        /// <param name="claim">The claim.</param>
-        /// <param name="roles">The roles.</param>
-        /// <returns>An array of bools.</returns>
-        /// <remarks>
-        /// The method returns an array of results. The roles are evaluated in an order of passing.
-        /// </remarks>
-        public bool[] Evaluate<TClaim>(TClaim claim, params object[] roles)
-            where TClaim : class, IClaim
-        {
-            return EvaluateImpl<TClaim, bool>(claim, roles);
-        }
-
         public bool HasAnyEvaluators<TDemand, TResult>(params object[] roles) 
             where TDemand : class, IDemand<TResult>
         {
@@ -69,8 +51,6 @@ namespace Themis.Impl
 
             return false;
         }
-
-        #endregion
 
         private TResult[] EvaluateImpl<TDemand, TResult>(TDemand demand, object[] roles)
             where TDemand : class, IDemand<TResult>

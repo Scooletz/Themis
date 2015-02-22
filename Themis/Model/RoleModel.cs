@@ -33,8 +33,6 @@ namespace Themis.Model
             _evaluators = temp.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.ToArray());
         }
 
-        #region IRoleModel Members
-
         public object[] Evaluate(object demand, object role)
         {
             if (role == null)
@@ -63,8 +61,6 @@ namespace Themis.Model
         {
             get { return typeof (TRole); }
         }
-
-        #endregion
 
         public object[] Evaluate(object demand, TRole role)
         {

@@ -96,7 +96,6 @@
     <Compile Include="TestData\ADemand.cs" />
     <Compile Include="TypeTrio.cs" />
     <Compile Include="Utils\ExpressionHelperTests.cs" />
-    <Compile Include="Utils\TypeExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NHibernate\Mapping.hbm.xml" />

@@ -4,7 +4,7 @@ namespace Themis.NHibernate
     /// The interface of demands specified for an entity.
     /// </summary>
     /// <typeparam name="TEntity">The type of the entity.</typeparam>
-    public sealed class EntityDemand<TEntity> : IClaim
+    public sealed class EntityDemand<TEntity> : IDemand
         where TEntity : class
     {
         public EntityDemand(TEntity entity)

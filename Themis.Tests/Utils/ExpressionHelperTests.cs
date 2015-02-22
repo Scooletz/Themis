@@ -1,8 +1,8 @@
 using System;
 using System.Linq.Expressions;
 using NUnit.Framework;
+using Themis.Expressions;
 using Themis.Tests.TestData;
-using Themis.Utils.Expressions;
 
 namespace Themis.Tests.Utils
 {

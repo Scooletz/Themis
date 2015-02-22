@@ -1,6 +1,6 @@
 namespace Themis.Tests.NHibernate.Demands
 {
-    public class ViewDemand<TEntity> : IClaim
+    public class ViewDemand<TEntity> : IDemand
     {
         public ViewDemand(TEntity entity)
         {

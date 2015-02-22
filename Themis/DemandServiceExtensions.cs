@@ -14,7 +14,7 @@ namespace Themis
         /// <param name="roles">The roles.</param>
         /// <returns><seealso cref="IDemandService.HasAnyEvaluators{TDemand,TResult}"/> for more information.</returns>
         public static bool HasAnyEvaluators<TClaim>(this IDemandService @this, params object[] roles)
-            where TClaim : class, IClaim
+            where TClaim : class, IDemand
         {
             return @this.HasAnyEvaluators<TClaim, bool>(roles);
         }
